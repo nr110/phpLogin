@@ -148,7 +148,6 @@
    
 <div class="pl-5 pt-2">
 <button type="submit" class="btn bg-primary text-white " id="registerbttn">Submit</button>
-  <input type="hidden" name="solution" value="<?php echo $sHash; ?>">
 </div>
    
  </form>

@@ -59,19 +59,15 @@
       $feedback.='<li>Please enter a username.';
     }
     else if (false===$bValidUname){
-      $feedback .='<li>' . $_POST['uname'] . ' is not a valid username, please enter a valid one.<br>';;}
+      $feedback .='<li>' . $_POST['uname'] . ' is not a valid username, please enter a valid one.';;}
 
 
    
     if ($pword===""){
       $feedback.="<li>Please enter a password.";
     }
-    else if (1===$bValidPWord){
-      $feedback.='<li> Your password cannot contain a "*".';}
-    else if (2===$bValidPWord){
-      $feedback.='<li> Your password cannot contain a "$".';}
-    else if(3===$bValidPWord){
-      $feedback.='<li> Your password must be at least 5 characters.';}
+    else if (false===$bValidPWord){
+      $feedback.='<li> Your password is bad.';}
 
 
    
@@ -160,7 +156,7 @@
  let gDoc=(id)=>{return document.getElementById(id);}
  let loginClicked=(e)=>{
  console.log("loginClicked()");
- gDoc("regform").submit()
+ gDoc("subForm").submit()
  }
  </script>
  
